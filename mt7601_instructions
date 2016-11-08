@@ -1,0 +1,19 @@
+sudo apt-get install git
+git clone https://github.com/porjo/mt7601.git 
+cd mt7601/src
+make
+sudo make install
+sudo mkdir -p /etc/Wireless/RT2870STA/
+sudo cp RT2870STA.dat /etc/Wireless/RT2870STA/
+sudo modprobe mt7601Usta
+
+This is the link to source: http://askubuntu.com/questions/575413/ralink-148f760b-mt7601-driver-kernel-panic-on-ubuntu-14-04
+
+
+
+You have compiled the driver for your currently running kernel version only. When Update Manager installs a later linux-image, after the requested reboot, re-compile:
+
+cd mt7601/src
+make
+sudo make install
+sudo modprobe mt7601Usta

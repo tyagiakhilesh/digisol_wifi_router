@@ -1,0 +1,6 @@
+simply load the driver by using this command.
+
+akhilesh@geeklab:~$ cd Drivers/mt7601/src/;
+sudo insmod os/linux/mt7601Usta.ko
+
+That's it. And enjoy.
